@@ -1,0 +1,40 @@
+.header {
+  background-color: var(--black-color);
+  padding-top: 15px;
+  padding-bottom: 13px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  animation-name: showHeader;
+  animation-duration: 1s;
+  z-index: 1;
+
+  &-f {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    animation-name: showHeader;
+    animation-duration: 1s;
+    z-index: 10000;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    gap: 62px;
+    align-items: center;
+  }
+}
+
+
+@keyframes showHeader {
+  0% {
+    opacity: 0;
+    top: -70px;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}

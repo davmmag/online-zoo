@@ -1,0 +1,44 @@
+.logo {
+  width: 83px;
+  color: var(--white-color);
+  font-size: 1.9rem;
+  line-height: 1.2;
+  text-align: center;
+  border: 1px solid var(--white-color);
+  position: relative;
+  text-align: center;
+  width: 82px;
+  height: 52px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url(../assets/svg/logo-1.svg);
+    background-repeat: no-repeat;
+    left: 11%;
+    bottom: 16%;
+  }
+  &--menu {
+    color: var(--orange-color);
+    border: 1px solid var(--orange-color) !important;
+    font-size: 1.25rem;
+    line-height: 1.2;
+    padding: 0;
+    width: 66px;
+    height: 42px;
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+
+    &--active {
+      display: block;
+      visibility: visible;
+      opacity: 1;
+      margin-bottom: 30px;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@import './abstracts/variables';
+
+@import './base/fonts';
+@import './base/base';
+@import './base/buttons';
+
+@import './layout/container';
+
+@import './components/logo';
+@import './components/burger-menu';
+@import './components/carousel';
+@import './components/grid-item.scss';
+@import './components/arrow';
+// @import './base/normalize';
+
+// @import './base/colors';
+// @import './base/mixins';
+
+@import './layout/header';
+@import './layout/nav';
+@import './layout/hero';
+@import './layout/pets';
+@import './layout/pick';
+// @import './layout/testimonials';
+// @import './layout/footer';
+
+// @import './module/logo';
+// @import './module/title';
+// @import './module/text';
+// @import './module/block-pet';
+// @import './module/arrow';
+// @import './module/progressbar';
+// @import './module/button';
+// @import './module/line';
+// @import './module/burger-menu';
+// @import './module/grid';
+// @import './module/modal';
+// @import './module/carousel';

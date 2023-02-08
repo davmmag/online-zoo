@@ -1,0 +1,15 @@
+.container {
+  max-width: var(--container-width);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--p-container);
+
+  &--f {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    animation-name: showHeader;
+    animation-duration: 1s;
+    z-index: 10000;
+  }
+}

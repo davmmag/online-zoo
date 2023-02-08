@@ -1,0 +1,57 @@
+.btn {
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  transition: all .4s ease-in-out;
+
+  &--big {
+    width: 298px;
+    height: 54px;
+    font-weight: 500;
+    color: var(--white-color);
+    text-transform: uppercase;
+    border-radius: 5px;
+    letter-spacing: - 0.0583rem;
+  }
+
+  &--circle {
+    border-radius: 25px;
+  }
+  
+  &--orange {
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+
+    &:hover {
+      background: linear-gradient(113.96deg, #e47209 1.49%, #e47209 101.44%);
+    }
+
+    &:active {
+      background-color: var(--green-color);
+    }
+  }
+  
+  &--submit {
+    min-width: 129px;
+    min-height: 42px;
+    background-color: var(--light-gray-color);
+    color: var(--black-color);
+    border: 1px solid var(--outer-space-color);
+    border-radius: 2px;
+
+    &:hover,
+    &:active {
+      color: var(--green-color);
+      border-color: var(--green-color);
+    }
+
+    &:invalid {
+      color: var(--red-color);
+      border-color: var(--red-color);
+    }
+  }
+}

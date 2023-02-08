@@ -1,0 +1,29 @@
+.grid-item {
+  padding-bottom: 14px;
+  border: 1px solid var(--orange-color);
+  max-width: 366px;
+  border-radius: 5px;
+  min-height: 426px;
+  overflow: hidden;
+
+  &__content {
+    padding: 6px 0 0 15px;
+  }
+
+  &__img {
+    height: 366px;
+  }
+
+  &__title {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--black-color);
+    margin-bottom: 0;
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }  
+}

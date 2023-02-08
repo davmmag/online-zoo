@@ -1,0 +1,70 @@
+.burger {
+  z-index: 1001;
+  position: relative;
+  width: 18px;
+  height: 10px;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+
+  @media screen and (max-width: $media-lg){
+    display: block;
+  }
+
+  &__line {
+    position: absolute;
+    right: 0;
+    top: 51%;
+    width: 100%;
+    height: 2px;
+    background-color: var(--white-color);
+    transform: translateY(-50%);
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 2px;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--white-color);
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, bottom 0.3s ease-in-out;
+    border-radius: 2px;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: -1px;
+  }
+
+  &--active &__line {
+    opacity: 0;
+  }
+
+  &--active {
+    &::before {
+      background-color: var(--black-color);
+      width: 100%;
+      top: 50%;
+      transform: rotate(45deg);
+    }
+  }
+
+  &--active {
+    &::after {
+      background-color: var(--black-color);
+      width: 100%;
+      bottom: auto;
+      top: 50%;
+      transform: rotate(-45deg);
+    }
+  }
+}
