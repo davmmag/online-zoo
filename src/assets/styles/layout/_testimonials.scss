@@ -1,29 +1,8 @@
 .testimonials {
   position: relative;
-  @media screen and (max-width: $media-lg) {
-    .btn {
-      margin: 0 auto;
-      width: 240px;
-    }
-  }
   &__container {
     padding-top: 142px;
     padding-bottom: 180px;
-
-    @media screen and (max-width: $media-xl) {
-      padding-top: 100px;
-      padding-bottom: 140px;
-    }
-
-    @media screen and (max-width: $media-lg) {
-      padding-top: 60px;
-      padding-bottom: 79px;
-    }
-
-    @media screen and (max-width: $media-sm) {
-      padding-top: 30px;
-      padding-bottom: 61px;
-    }
   }
 
   &__container-inner {
@@ -33,208 +12,27 @@
     background-image: url(../images/leav.png);
     background-repeat: no-repeat;
     background-position: 100% 126%;
-
-    @media screen and (max-width: $media-xl) {
-      background-size: 203px 312px;
-      background-position: 100% 114%;
-    }
-
-    @media screen and (max-width: $media-lg) {
-      background-size: 105px 200px;
-    }
-
-    @media screen and (max-width: $media-sm) {
-      background-size: 59px 93px;
-      background-position: 100% 106%;
-    }
   }
 
   &__content {
-    --col: 268px;
     display: grid;
-    grid-template-columns: repeat(4, minmax(auto, var(--col)));
+    grid-template-columns: repeat(4, 268px);
     grid-template-rows: 391px;
-    --gap: calc((var(--size) - (var(--col) * 4)) / 4 + 8px);
-    --size-c: calc((var(--col) * 4 + var(--gap) * 4));
-    gap: var(--gap);
-    margin: 0 auto 21px;
-    max-width: var(--size-c);
+    gap: 30px;
+    margin: 0 auto 60px;
     width: 100%;
-
-    @media screen and (max-width: $media-xl) {
-      --col: 293px;
-      grid-template-columns: repeat(3, minmax(auto, var(--col)));
-      grid-template-rows: minmax(391px, auto);
-      column-gap: 30px;
-      justify-content: center;
-    }
-
-    @media screen and (max-width: $media-lg) {
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(3, minmax(auto, 109px));
-      row-gap: 15px;
-      margin-bottom: 40px;
-    }
-
-    @media screen and (max-width: $media-sm) {
-      margin-bottom: 30px;
-    }
+    height: 391px;
   }
 
   &__title {
     text-align: center;
     margin-bottom: 44px;
-
-    @media screen and (max-width: $media-xl) {
-      margin-bottom: 30px;
-    }
-
-    @media screen and (max-width: $media-sm) {
-      margin-bottom: 17px;
-    }
   }
 
   &__item {
     padding: 15px 15px 19px 15px;
     background-color: var(--light-gray-color);
-    border: 2px solid #e0d8f0;
     border-radius: 20px;
     overflow: hidden;
-
-    @media screen and (max-width: $media-xl) {
-      padding: 13px 17px 19px 15px;
-      &:nth-child(4) {
-        display: none;
-      }
-    }
-
-    @media screen and (max-width: $media-lg) {
-      padding: 14px 25px 8px 10px;
-      cursor: pointer;
-
-      &-popup {
-        position: absolute;
-        width: 267px;
-        height: 391px;
-        padding: 15px 15px 19px 15px;
-        background-color: var(--light-gray-color);
-        border: 2px solid #e0d8f0;
-        border-radius: 20px;
-        z-index: 1001;
-        left: 50%;
-
-        .testimonials__item-text {
-          height: 309px;
-        }
-      }
-    }
-
-    
-
-    @media screen and (max-width: $media-sm) {
-      padding: 11px 10px 8px;
-      &:nth-child(2) {
-        display: none;
-      }
-
-      &:nth-child(3) {
-        order: 1;
-      }
-
-      &:nth-child(4) {
-        display: block;
-      }
-    }
-  }
-
-&__close {
-  position: relative;
-  width: 14px;
-  height: 14px;
-  font-size: 2rem;
-
-  .cross {
-    position: absolute;
-    left: 239px;
-    top: -403px;
-    background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
-    cursor: pointer;
-    background-size: 3px 3px;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    padding: 10px;
-  }
-}
-
-  &__item-img {
-    margin-right: 10px;
-
-    @media screen and (max-width: $media-sm) {
-      margin-right: 6px;
-    }
-  }
-
-  &__item-header {
-    display: flex;
-    margin-bottom: 8px;
-
-    @media screen and (max-width: $media-xl) {
-      margin-bottom: 12px;
-    }
-  }
-
-  &__item-title {
-    line-height: 1.2;
-    font-weight: 600;
-    color: var(--black-color);
-    word-spacing: 0.166em;
-    font-size: 1.25rem;
-  }
-
-  &__item-descr {
-    color: var(--gray-color-2);
-  }
-
-  &__item-place {
-    margin-right: 16px;
-    position: relative;
-
-    &::after {
-      content: '';
-      position: absolute;
-      width: 3px;
-      height: 3px;
-      background-color: var(--gray-color-2);
-      border-radius: 100%;
-      top: 50%;
-      right: -13%;
-    }
-
-    @media screen and (max-width: $media-lg) {
-      margin-right: 6px;
-    }
-  }
-
-  &__item-text {
-    color: var(--gray-color);
-    letter-spacing: -0.016rem;
-
-    @media screen and (max-width: $media-lg) {
-      height: 37px;
-      overflow: hidden;
-      padding-left: 7px;
-    }
-  }
-
-  &__line {
-    margin: 0 auto 32px;
-
-    @media screen and (max-width: $media-xl) {
-      margin-bottom: 52px;
-    }
-
-    @media screen and (max-width: $media-lg) {
-      display: none;
-    }
   }
 }

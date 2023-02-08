@@ -40,7 +40,7 @@ h4 {
 h5 {
   font-size: 1.6rem;
   line-height: 1.375;
-  text-transform: uppercase;
+  font-weight: 500;
 }
 
 .body {
@@ -59,4 +59,78 @@ p {
 
 img {
   display: inline-block;
+}
+
+.module-border-wrap {
+  padding: 1px;
+  position: relative;
+  background: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%),
+              linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);;
+  border-radius: 20px;
+}
+
+.column-4-item {
+  padding: 13px 14px 19px 14px;
+  border-radius: 20px;
+  background-color: var(--light-gray-color);
+  height: 388px;
+
+  &__head {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__data {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    span {
+      &:first-child {
+        position: relative;
+    
+        &::after {
+          content: "";
+          position: absolute;
+          width: 3px;
+          right: -10%;
+          top: 42%;
+          height: 3px;
+          background-color: #BDBDBD;
+          display: block;
+          border-radius: 100%;
+        }
+      }
+    }
+  }
+
+  &__img {
+    width: 37px;
+    height: 37px;
+  }
+
+  &__text-section {
+    height: 309px;
+    overflow: hidden;
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+}
+
+.text--gray {
+  color: #767474;
+}
+
+.text--small {
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.text--normal {
+  font-size: 1.6rem;
 }
