@@ -1,5 +1,5 @@
 .header {
-  background-color: var(--black-color);
+  background-color: var(--clr-primary-bg);
   padding-top: 15px;
   padding-bottom: 13px;
   position: fixed;
@@ -36,5 +36,18 @@
   100% {
     opacity: 1;
     top: 0;
+  }
+}
+
+
+@media screen and (max-width: $tablet-width) {
+  .header {
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+  .header__container {
+    display: flex;
+    justify-content: space-between;
+    height: 29px;
   }
 }

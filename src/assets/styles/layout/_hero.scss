@@ -17,10 +17,6 @@
       background-size: cover;
       background-image: url(../images/panda_bg.png);
     }
-
-    @media screen and (max-width: $media-sm) {
-      height: 188px;
-    }
   }
 
   &__container {
@@ -30,19 +26,18 @@
 
   &__content {
     position: relative;
-    z-index: 1000;
+    z-index: 2;
   }
   &__title {
     max-width: 500px;
-    line-height: 0.75;
     margin: 0;
     margin-bottom: 65px;
-    z-index: 1000;
+
     &::before {
       content: '';
       display: inline-block;
-      width: 465px;
-      height: 465px;
+      width: var(--round);
+      height: var(--round);
       border-radius: 100%;
       background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
       position: absolute;
@@ -58,5 +53,93 @@
 
   &__btn {
     margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: $small-desktop) {
+  .hero {
+    &__container-inner {
+      background-position-y: 0;
+      padding-bottom: 50px;
+      background-image: url(../images/hero-bg-2.png);
+    }
+
+    &__title {
+      margin-bottom: 40px;
+    
+      &::before {
+        left: -3%;
+        top: -12%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet-width) {
+  .hero {
+    &__container-inner {
+      padding-top: 47px;
+      background-position-y: -33px;
+      padding-bottom: 0;
+      min-height: 340px;
+      max-height: 100vh;
+    }
+
+    &__container {
+      justify-content: flex-start;
+      
+    }
+    &__title {
+      max-width: 255px;
+      margin: 0;
+      align-self: flex-start;
+
+      &::before {
+        right: 9%;
+        left: auto;
+        top: -15%;
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: flex-end;
+      justify-content: space-between;
+      height: 253px;
+      width: 100%;
+    }
+
+    &__btn {
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .hero {
+    &__btn {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-width) {
+  .hero {
+    &__container-inner {
+      min-height: auto;
+      padding-top: 43px;
+      padding-bottom: 40px;
+      background-position-y: 0;
+    }
+
+    &__content {
+      height: auto;
+      flex-wrap: wrap;
+    }
+
+    &__title {
+      max-width: 128px;
+    }
   }
 }

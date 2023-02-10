@@ -1,16 +1,11 @@
 .pets {
-  &__head-btn.btn {
-    display: none;
-
-    @media screen and (max-width: $media-sm) {
-      display: inline-block;
-      margin-bottom: 43px;
-    }
-  }
-
   &__container {
     padding-top: 140px;
     padding-bottom: 20px;
+  }
+
+  &__head-btn.btn {
+    display: none;
   }
 
   &__container-inner {
@@ -32,17 +27,6 @@
 
   &__content {
     padding-right: 30px;
-  }
-
-  &__img {
-    @media screen and (max-width: $media-xl) {
-      min-height: 410px;
-      object-fit: cover;
-    }
-
-    @media screen and (max-width: $media-lg) {
-      display: none;
-    }
   }
 
   &__title {

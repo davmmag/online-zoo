@@ -11,20 +11,40 @@
   transition: all .4s ease-in-out;
   border: none;
   outline: none;
-  color: #fff;
-  text-transform: uppercase;
-
-  &--round {
-    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  
+  &--round,
+  &--rect {
+    text-transform: uppercase;
+    color: var(--clr-secondary);
     min-width: 298px;
     min-height: 54px;
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  }
+
+  &--round {
     border-radius: 25px;
   }
 
   &--rect {
-    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
-    min-width: 298px;
-    min-height: 54px;
     border-radius: 5px;
+  }
+
+  &--submit {
+    min-width: 129px;
+    min-height: 42px;
+    color: var(--clr-primary);
+    border: 1px solid var(--clr-primary-alt);
+    border-radius: 5px;
+
+    &:hover,
+    &:active {
+      color: var(--clr-button-hover);
+      border-color: var(--clr-button-hover);
+    }
+
+    &:invalid {
+      color: var(--red-color);
+      border-color: var(--red-color);
+    }
   }
 }

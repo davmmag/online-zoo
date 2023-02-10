@@ -1,5 +1,5 @@
 .container {
-  max-width: var(--container-width);
+  max-width: var(--content-width);
   width: 100%;
   margin: 0 auto;
   padding: 0 var(--p-container);
@@ -12,4 +12,8 @@
     animation-duration: 1s;
     z-index: 10000;
   }
+}
+
+@media screen and (max-width: $small-desktop) {
+
 }

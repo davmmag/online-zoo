@@ -31,23 +31,23 @@
   gap: 20px 30px;
 }
 
-@media screen and (max-width: $media-xl) {
-  .carousel__item-list {
-    grid-template-columns: repeat(3, minmax(200px, 294px));
-    grid-template-rows: repeat(2, 354px);
-    gap: 92px 30px;
-    margin: 0 auto;
-    width: fit-content;
-  }
+// @media screen and (max-width: $media-xl) {
+//   .carousel__item-list {
+//     grid-template-columns: repeat(3, minmax(200px, 294px));
+//     grid-template-rows: repeat(2, 354px);
+//     gap: 92px 30px;
+//     margin: 0 auto;
+//     width: fit-content;
+//   }
 
-}
+// }
 
-@media screen and (max-width: $media-lg) {
-  .carousel__item-list {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 92px 30px;
-    justify-content: center;
-  }
-}
+// @media screen and (max-width: $media-lg) {
+//   .carousel__item-list {
+//     width: 100%;
+//     display: flex;
+//     flex-wrap: wrap;
+//     gap: 92px 30px;
+//     justify-content: center;
+//   }
+// }

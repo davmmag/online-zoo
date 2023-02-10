@@ -1,6 +1,7 @@
 @import './abstracts/variables';
 
 @import './base/fonts';
+@import './base/normalize';
 @import './base/base';
 @import './base/buttons';
 
@@ -11,7 +12,8 @@
 @import './components/carousel';
 @import './components/grid-item.scss';
 @import './components/arrow';
-// @import './base/normalize';
+@import './components/social';
+@import './components/form-subscribe';
 
 // @import './base/colors';
 // @import './base/mixins';
@@ -22,7 +24,7 @@
 @import './layout/pets';
 @import './layout/pick';
 @import './layout/testimonials';
-// @import './layout/footer';
+@import './layout/footer';
 
 // @import './module/logo';
 // @import './module/title';

@@ -11,7 +11,7 @@
     border-radius: 20px;
     padding: 38px 30px 59px;
     background: rgba(253, 253, 255, 0.52);
-    max-width: calc(var(--container-width) - (var(--p-container) * 2));
+    max-width: calc(var(--content-width) - (var(--p-container) * 2));
 
     &--donate {
       padding-left: 92px;
@@ -28,46 +28,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    
   }
 
   &__definition {
     margin-bottom: 35px;
-
-    &--donate {
-      padding: 0;
-    }
   }
+
   &__title {
     margin-bottom: 35px;
-    color: var(--orange-color);
+    color: var(--clr-additional);
     text-align: center;
-
-    &--donate {
-      margin-left: 0;
-      margin-bottom: 22px;
-    }
-  }
-
-  &__header {
-    max-width: calc(var(--size) + var(--p-container) * 2);
-    width: 100%;
-    padding: 0 var(--p-container);
-    margin: 0 auto 60px;
-  }
-
-  &__header-title {
-    margin-bottom: 10px;
-  }
-
-  &__header-text {
-    color: var(--white-color);
-    margin-bottom: 49px;
-    max-width: 1152px;
-  }
-
-  &__header-subtitle {
-    color: var(--orange-color);
   }
 
   &__preview {
@@ -80,11 +50,6 @@
 
   &__slogan {
     margin-bottom: 40px;
-
-    &--donate {
-      font-weight: 400;
-      margin-bottom: 60px;
-    }
   }
 
   &__text {
@@ -109,14 +74,14 @@
   &__img {
     width: 168px;
     height: 168px;
-    background-color: var(--white-color);
+    background-color: var(--clr-secondary);
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
-    border: 1px solid var(--orange-color);
+    border: 1px solid var(--clr-additional);
 
     &--pay {
       background-image: url(../svg/pay.svg);
@@ -154,10 +119,6 @@
 
   &__btn {
     margin: 0 auto 30px;
-
-    &--donate {
-      margin: 0 auto 30px;
-    }
   }
 
   &__progressbar {

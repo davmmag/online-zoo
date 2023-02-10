@@ -9,7 +9,7 @@
   cursor: pointer;
   display: none;
 
-  @media screen and (max-width: $media-lg){
+  @media screen and (max-width: $tablet-width){
     display: block;
   }
 
@@ -50,6 +50,10 @@
   }
 
   &--active {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+
     &::before {
       background-color: var(--black-color);
       width: 100%;

@@ -11,10 +11,10 @@ html {
 }
 
 h1 {
-  font-size: 10.6rem;
+  font-size: var(--h1-font-size);
   font-weight: 700;
   text-transform: uppercase;
-  line-height: 1;
+  line-height: 0.75;
   text-align: center;
   color: var(--clr-secondary);
 }
@@ -133,4 +133,33 @@ img {
 
 .text--normal {
   font-size: 1.6rem;
+}
+
+.text--hov-underline {
+  color: var(--clr-secondary);
+  position: relative;
+  text-decoration: none;
+  display: inline;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--clr-button-hover);
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+  }
+
+  &:hover {
+    color: var(--clr-button-hover);
+  }
+
+  &:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
 }

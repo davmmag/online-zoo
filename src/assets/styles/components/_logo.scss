@@ -1,44 +1,60 @@
 .logo {
-  width: 83px;
-  color: var(--white-color);
+  display: inline-block;
+  color: var(--clr-secondary);
   font-size: 1.9rem;
   line-height: 1.2;
   text-align: center;
-  border: 1px solid var(--white-color);
+  border: 1px solid var(--clr-secondary);
   position: relative;
   text-align: center;
   width: 82px;
   height: 52px;
-  position: relative;
+  cursor: pointer;
 
   &::after {
     content: "";
     position: absolute;
     width: 20px;
     height: 20px;
-    background-image: url(../assets/svg/logo-1.svg);
+    background-image: url(../svg/logo-1.svg);
     background-repeat: no-repeat;
-    left: 11%;
-    bottom: 16%;
+    left: 12%;
+    bottom: 18%;
   }
-  &--menu {
-    color: var(--orange-color);
-    border: 1px solid var(--orange-color) !important;
-    font-size: 1.25rem;
-    line-height: 1.2;
-    padding: 0;
-    width: 66px;
-    height: 42px;
-    margin: 0;
-    opacity: 0;
-    visibility: hidden;
-    display: none;
+}
+
+
+@media screen and (max-width: $tablet-width) {
+  .logo {
+    width: 47px;
+    height: 29px;
+    font-size: 1.23rem;
+    border: none;
+
+    &::after {
+      width: 10px;
+      height: 14px;
+      left: 5%;
+      bottom: 5%;
+    }
 
     &--active {
-      display: block;
-      visibility: visible;
-      opacity: 1;
-      margin-bottom: 30px;
+      color: var(--clr-additional);
+      border: 1px solid var(--clr-additional);
+      font-size: 1.5rem;
+      width: 66px;
+      height: 42px;
+      position: absolute;
+      top: 11px;
+      left: 9px;
+      z-index: 3;
+    
+      &::after {
+        background-image: url(../svg/logo_active.svg);
+        height: 16px;
+        left: 12%;
+        bottom: 18%;
+      }
     }
   }
 }

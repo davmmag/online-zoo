@@ -1,15 +1,11 @@
-$media-xl: 1350px;
-$media-lg: 765px;
-$media-sm: 480px;
+$small-desktop: 1000px;
+$tablet-width: 770px;
+$mobile-width: 400px;
 
 :root {
   --size: 1160px;
   --p-container: 30px;
   --header-height: 8rem;
-
-  @media screen and (max-width: $media-lg) {
-    --p-container: 20px;
-  }
 
   /*========== Colors ==========*/
   --black-color: #000000;
@@ -26,21 +22,19 @@ $media-sm: 480px;
   --white-color: #ffffff;
 
   --clr-primary: #000000;
+  --clr-primary-bg: #111115;
   --clr-primary-alt: #333b41;
   --clr-secondary: #ffffff;
   --clr-additional: #fe9013;
+  --clr-button-hover: #4b9200;
 
-  --container-width: 1220px;
-
-  --content-width: 1350px;
-  --tablet-width: 765px;
-  --mobile-big-width: 480px;
-  --mobile-small-width: 320px;
+  --content-width: 1220px;
+  --round: 465px;
 
   /*========== Font and typography ==========*/
   --body-font: 'Roboto', sans-serif;
 
-  --h1-font-size: 8.8rem;
+  --h1-font-size: 10.6rem;
   --h2-font-size: 4rem;
   --h3-font-size: 3rem;
   --subt-font-size: 2rem;
@@ -48,32 +42,39 @@ $media-sm: 480px;
   --text: 1.25rem;
 
   // Responsive typography
-  @media screen and (max-width: $media-xl) {
-    --h1-font-size: 7.08rem;
+  @media screen and (max-width: $small-desktop) {
+    --h1-font-size: 8.5rem;
     --h2-font-size: 4rem;
     --h3-font-size: 3rem;
     --subt-font-size: 2rem;
     --nav-font-size: 1.3rem;
     --text: 1.25rem;
+
+    --round: 367px;
   }
 
-  @media screen and (max-width: $media-lg) {
-    --h1-font-size: 4.5rem;
+  @media screen and (max-width: $tablet-width) {
+    --h1-font-size: 5.4rem;
     --h2-font-size: 4rem;
     --h3-font-size: 3rem;
     --subt-font-size: 1.83rem;
     --nav-font-size: 1.3rem;
     --text: 1.25rem;
+
+    --round: 237.6px;
+    --p-container: 20px;
   }
 
-  @media screen and (max-width: $media-sm) {
-    --h1-font-size: 2.3rem;
+  @media screen and (max-width: $mobile-width) {
+    --h1-font-size: 2.8rem;
     --h2-font-size: 2rem;
     --h3-font-size: 2rem;
     --subt-font-size: 1.83rem;
     --nav-font-size: 1.3rem;
     --text: 1.25rem;
     --p-container: 11px;
+
+    --round: 119px;
   }
 
   /*========== z index ==========*/

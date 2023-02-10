@@ -1,12 +1,12 @@
+import Carousel from './carousel.js';
+import blocksGeneration from './pets.js';
+import overlay from './overlay.js';
+import BurgerMenu from './burger.js';
 
-import Carousel from "./carousel.js";
-import blocksGeneration from "./pets.js";
 const burger = document.querySelector('[data-burger]');
-const nav = document.querySelector('.nav');
-const navLinks = document.querySelectorAll('.nav__link');
-const logo = document.querySelector('.logo__menu');
-const overlayBlock = document.querySelector('.overlay');
+const NAV = document.querySelector('.nav');
 const header = document.querySelector('.header');
+const logo = header.querySelector('.logo');
 const sticky = header.offsetTop;
 const headerHeight = header.offsetHeight;
 const body = document.body;
@@ -16,37 +16,15 @@ const mainBlock = document.querySelector('.testimonials__content');
 const windowInnerWidth = document.documentElement.clientWidth;
 const dialog = document.querySelector('.dialog');
 
-const overlay = () => {
-  if (overlayBlock.classList.contains('active')) overlayBlock.classList.remove('active');
-  else {
-    overlayBlock.classList.add('active');
-  }
+console.log(headerHeight)
+
+const options = {
+  nav: NAV,
+  logo: logo,
+  burger: burger,
 }
 
-const burgerRun = () => {
-  const burgerFunc = (flag) => {
-    if (flag) {
-      nav.classList.add('nav--visible');
-      overlay();
-      logo.classList.add('logo__menu--active');
-      burger.classList.add('burger--active');
-    } else {
-      nav.classList.remove('nav--visible');
-      overlay();
-      logo.classList.remove('logo__menu--active');
-      burger.classList.remove('burger--active');
-    }
-  }
-
-  burger.addEventListener('click', () => {
-    if (nav.classList.contains('nav--visible')) burgerFunc(false);
-    else { burgerFunc(true); }
-  });
-
-  for (let el of navLinks) {
-    el.addEventListener('click', () => burgerFunc(false));
-  }
-};
+const burgerMenu = new BurgerMenu(options);
 
 const headerFix = () => {
   if (window.pageYOffset > sticky) {
@@ -60,8 +38,6 @@ const headerFix = () => {
 window.addEventListener('scroll', headerFix)
 
 headerFix();
-
-window.addEventListener('load', () => burgerRun());
 
 const modal = document.querySelector('.modal');
 if (modal) {
@@ -79,14 +55,14 @@ if (modal) {
 const close = document.querySelector('.cross');
 if (close) {
 close.onclick = function() {
-  modal.style.display = "none";
+  modal.style.display = 'none';
   overlay();
   body.style.overflow = 'visible';
 }
 }
 modal.addEventListener('click', (e) => {
   if (e.target == modal) {
-    modal.style.display = "none";
+    modal.style.display = 'none';
     body.style.overflow = 'visible';
     overlay();
   }
