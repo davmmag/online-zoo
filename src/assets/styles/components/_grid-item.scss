@@ -5,6 +5,7 @@
   border-radius: 5px;
   min-height: 426px;
   overflow: hidden;
+  background-color: var(--clr-secondary);
 
   &__content {
     padding: 6px 0 0 15px;
@@ -28,4 +29,49 @@
     font-size: 1.5rem;
     line-height: 1.2;
   }  
+}
+
+@media screen and (max-width: $small-desktop) {
+  .grid-item {
+    min-height: auto;
+    
+
+    &__img {
+      height: 294px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet-width) {
+  .grid-item {
+    &__img {
+      height: 285px;
+    }
+
+    &__title {
+      font-size: 1.25rem;
+    }
+
+    &__text {
+      font-size: 1.17rem;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet-width) {
+  .grid-item {
+    padding-bottom: 9px;
+
+    &__content {
+      padding-top: 5px;
+    }
+
+    &__title {
+      margin-bottom: 0;
+    }
+
+    &__text {
+      line-height: 1.2;
+    }
+  }
 }

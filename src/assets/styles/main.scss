@@ -5,8 +5,6 @@
 @import './base/base';
 @import './base/buttons';
 
-@import './layout/container';
-
 @import './components/logo';
 @import './components/burger-menu';
 @import './components/carousel';
@@ -15,9 +13,7 @@
 @import './components/social';
 @import './components/form-subscribe';
 
-// @import './base/colors';
-// @import './base/mixins';
-
+@import './layout/container';
 @import './layout/header';
 @import './layout/nav';
 @import './layout/hero';
@@ -25,6 +21,10 @@
 @import './layout/pick';
 @import './layout/testimonials';
 @import './layout/footer';
+// @import './base/colors';
+// @import './base/mixins';
+
+
 
 // @import './module/logo';
 // @import './module/title';

@@ -59,9 +59,10 @@
 @media screen and (max-width: $small-desktop) {
   .hero {
     &__container-inner {
-      background-position-y: 0;
-      padding-bottom: 50px;
+      background-position-y: -75px;
       background-image: url(../images/hero-bg-2.png);
+      padding-top: 42px;
+      min-height: 504px;
     }
 
     &__title {

@@ -98,11 +98,11 @@ const createBlock = (index) => {
   return ITEM;
 }
 
-const blocksGeneration = (startIndex = 0, endIndex = 12) => {
-  const indexes = shuffle(Array.from({ length: 12 }, (v, i) => i));
+const blocksGeneration = (pages = 2, length = 12) => {
+  const indexes = shuffle(Array.from({ length: length }, (v, i) => i));
   TO_LEFT_SLIDE.innerHTML = '';
   TO_RIGHT_SLIDE.innerHTML = '';
-  for (let i = startIndex; i < endIndex; i++) {
+  for (let i = 0; i < length; i++) {
     const indexOfAnimal = indexes[i];
     if (i < 6) TO_LEFT_SLIDE.append(createBlock(indexOfAnimal));
     else TO_RIGHT_SLIDE.append(createBlock(indexOfAnimal));
