@@ -1,11 +1,12 @@
 .social {
   list-style: none;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+
+  gap: 19px;
 
   &__item {
     transition: all .3s ease-in-out;
+
     &:hover {
       .social__name {
         color: var(--clr-button-hover);
@@ -49,8 +50,25 @@
   }
 
   &__name {
-    font-size: 1.6rem;
-    line-height: 1.4;
-    color: var(--clr-secondary);
+    display: none;
+  }
+}
+
+@media (min-width: 640px) {
+  .social {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1000px) {
+  .social {
+    gap: 10px;
+    
+    &__name {
+      display: block;
+      font-size: 1.6rem;
+      line-height: 1.4;
+      color: var(--clr-secondary);
+    }
   }
 }

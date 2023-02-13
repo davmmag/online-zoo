@@ -38,6 +38,30 @@
       bottom: 5%;
     }
 
+    &--footer {
+      font-size: 1.9rem;
+      width: auto;
+      height: auto;
+      border: none;
+      &::after {
+        background-image: url(../svg/logo-1.svg);
+        width: 20px;
+        height: 20px;
+        left: 57%;
+        bottom: 22%;
+      }
+
+      @media (min-width: 640px) {
+        border: 1px solid var(--clr-secondary);
+        width: 82px;
+        height: 52px;
+          &::after {
+            left: 12%;
+            bottom: 18%;
+          }
+      }
+    }
+
     &--active {
       color: var(--clr-additional);
       border: 1px solid var(--clr-additional);

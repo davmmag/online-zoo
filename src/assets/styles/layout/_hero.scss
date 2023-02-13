@@ -1,16 +1,15 @@
 .hero {
+  height: 698px;
   &__container-inner {
     background-image: url(../images/hero-bg.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: -68px;
-    background-size: cover;
     max-width: 1600px;
     width: 100%;
     margin: 0 auto;
     overflow: hidden;
     padding-top: calc(5px + var(--header-height));
-    padding-bottom: 98px;
 
     &--donate {
       min-height: 390px;
@@ -58,11 +57,12 @@
 
 @media screen and (max-width: $small-desktop) {
   .hero {
+    height: 503px;
+
     &__container-inner {
-      background-position-y: -75px;
       background-image: url(../images/hero-bg-2.png);
-      padding-top: 42px;
-      min-height: 504px;
+      padding-top: 44px;
+      padding-bottom: 48px;
     }
 
     &__title {
@@ -78,11 +78,12 @@
 
 @media screen and (max-width: $tablet-width) {
   .hero {
+    height: 340px;
+
     &__container-inner {
       padding-top: 47px;
       background-position-y: -33px;
-      padding-bottom: 0;
-      min-height: 340px;
+      padding-bottom: 40px;
       max-height: 100vh;
     }
 
@@ -127,6 +128,8 @@
 
 @media screen and (max-width: $mobile-width) {
   .hero {
+    height: 187px;
+
     &__container-inner {
       min-height: auto;
       padding-top: 43px;

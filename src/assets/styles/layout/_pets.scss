@@ -49,6 +49,10 @@
   &__btn {
     margin: 0 auto;
   }
+
+  &__carousel {
+    margin: 0 auto 83px;
+  }
 }
 
 @media screen and (max-width: $small-desktop) {
@@ -121,6 +125,9 @@
     &__subtitle {
       margin-bottom: 20px;
     }
+    &__carousel {
+      margin: 0 auto 59px;
+    }
   }
 }
 
@@ -160,6 +167,9 @@
 
     &__subtitle {
       margin-bottom: 10px;
+    }
+    &__carousel {
+      margin: 5px;
     }
   }
 }
