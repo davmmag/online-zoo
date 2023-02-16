@@ -14,7 +14,6 @@ class BurgerMenu {
 
   start() {
     const { nav, logo, burger } = this.options;
-    console.log(logo)
     const flag = nav.classList.contains('nav--visible');
     if (flag === true) {
       nav.classList.remove('nav--visible');

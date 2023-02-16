@@ -11,7 +11,7 @@ export default {
   },
   js: {
     // src: 'src/assets/js/index.js',
-    src: 'src/**/*.js',
+    src: 'src/assets/js/index.js',
     watch: 'src/**/*.js',
     build: 'build/assets/js/',
   },

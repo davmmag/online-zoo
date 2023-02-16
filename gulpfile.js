@@ -5,13 +5,13 @@ import paths from './paths.js';
 import sourcemaps from 'gulp-sourcemaps';
 import sass from 'gulp-dart-sass';
 import cleanCSS from 'gulp-clean-css';
-import concat from 'gulp-concat';
-import imagemin from 'gulp-imagemin';
+import imagemin, { gifsicle, mozjpeg, optipng, svgo } from 'gulp-imagemin';
 import htmlmin from 'gulp-htmlmin';
-import svgo from 'gulp-svgo';
+// import svgo from 'gulp-svgo';
 import webpackStream from 'webpack-stream'
 import webpack from 'webpack'
 import TerserPlugin from 'terser-webpack-plugin'
+import uglify from 'gulp-uglify';
 
 const server = () => {
   browserSync.init({
@@ -79,7 +79,10 @@ export const scripts = () => {
 
 export const images = () => {
   return src(paths.img.src)
-    .pipe(imagemin())
+    .pipe(imagemin([
+      mozjpeg({ quality: 75, progressive: true }),
+      optipng({ optimizationLevel: 5 }),
+    ]))
     .pipe(dest(paths.img.build))
     .pipe(browserSync.stream())
 }
@@ -87,7 +90,20 @@ export const images = () => {
 export const svg = () => {
   return src(paths.svg.src)
     .pipe(dest(paths.svg.build))
-    .pipe(svgo())
+    .pipe(imagemin([
+      svgo({
+        plugins: [
+          {
+            name: 'removeViewBox',
+            active: true
+          },
+          {
+            name: 'cleanupIDs',
+            active: false
+          }
+        ]
+      })
+    ]))
     .pipe(browserSync.stream())
 }
 
@@ -96,7 +112,7 @@ const watcher = () => {
   watch(paths.styles.watch, { usePolling: true }, styles);
   watch(paths.img.watch, { usePolling: true }, images);
   watch(paths.svg.watch, { usePolling: true }, svg);
-  watch(paths.js.src, { usePolling: true }, scripts);
+  watch(paths.js.watch, { usePolling: true }, scripts);
 }
 
 export const build = series(html, parallel(styles, svg, images, scripts))

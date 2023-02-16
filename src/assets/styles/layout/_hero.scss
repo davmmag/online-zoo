@@ -1,5 +1,5 @@
 .hero {
-  height: 698px;
+  height: 700px;
   &__container-inner {
     background-image: url(../images/hero-bg.png);
     background-size: cover;
@@ -10,6 +10,7 @@
     margin: 0 auto;
     overflow: hidden;
     padding-top: calc(5px + var(--header-height));
+    padding-bottom: 100px;
 
     &--donate {
       min-height: 390px;
@@ -144,6 +145,49 @@
 
     &__title {
       max-width: 128px;
+    }
+  }
+}
+
+.hero-donate {
+  &__container-inner {
+    height: 221px;
+    background-image: url(../images/hero-small.png);
+    background-position: 45% 96%;
+    background-repeat: no-repeat;
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 640px) {
+  .hero-donate {
+    &__container-inner {
+      height: 370px;
+      background-image: url(../images/hero-bg-2.png);
+      background-position: -159px -134px;
+      background-size: 180%;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .hero-donate {
+    &__container-inner {
+      height: 470px;
+      background-size: 140%;
+      background-position: -65px -134px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-donate {
+    &__container-inner {
+      height: 386px;
+      background-size: 100%;
+      background-image: url(../images/hero-bg.png);
     }
   }
 }

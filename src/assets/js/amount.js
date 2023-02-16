@@ -1,50 +1,39 @@
 const VALUES = [5000, 2000, 1000, 500, 250, 100, 50, 25];
-const circles = document.querySelectorAll('.progressbar__circle');
-const input = document.querySelector('.pick__amount-input');
+const inputAmount = document.querySelector('.amount-input');
 
-
-const amount = (index, block, input) => {
-  if (index < -1) return;
-  if (!circles) return;
-  circles.forEach(item => item.classList.remove('progressbar__circle--active'));
-  circles[index].classList.add('progressbar__circle--active');
-  input.value = circles[index].querySelector('.progressbar__text').textContent.match(/[^$]/g).join('');
+const removeActivated = () => {
+  const activeBlock = document.querySelector('.progress__circle--active');
+  if (activeBlock) activeBlock.classList.remove('progress__circle--active');
 }
 
-class Amount {
-  constructor(elements, input) {
-    this.values = [5000, 2000, 1000, 500, 250, 100, 50, 25];
-    this.elements = elements;
-    this.input = input;
-  }
-
-  run() {
-    if (index < -1) return;
-    if (!circles) return;
-    circles.forEach(item => item.classList.remove('progressbar__circle--active'));
-    circles[index].classList.add('progressbar__circle--active');
-    input.value = circles[index].querySelector('.progressbar__text').textContent.match(/[^$]/g).join('');
-  }
+const followClickProgress = () => {
+  const progressBlock = document.querySelector('.progress');
+  progressBlock.addEventListener('click', (e) => {
+    const current = e.target.closest('.progress__circle');
+    const currentIndex = current.dataset.index;
+    
+    if (current) {
+      removeActivated();
+      current.classList.add('progress__circle--active');
+      inputAmount.value = VALUES[currentIndex];
+    }
+  })
 }
 
-if (input) {
-  input.addEventListener('input', () => {
-    if (typeof +input.value === 'number') {
-      if (values.indexOf(+input.value) !== -1) {
-        amount(values.indexOf(+input.value));
+const followInput = () => {
+  window.addEventListener('DOMContentLoaded', () => {
+    inputAmount.value = '';
+    inputAmount.focus();
+  });
+  inputAmount.addEventListener('input', () => {
+    for (const number of VALUES) {
+      if (number === +inputAmount.value) {
+        removeActivated();
+        const index = VALUES.indexOf(number);
+        document.querySelector(`[data-index="${index}"]`).classList.add('progress__circle--active');
       }
     }
   })
 }
 
-if (circles) {
-  circles.forEach(circle => {
-    circle.addEventListener('click', (e) => {
-      amount(circle.dataset.index);
-    })
-  });
-
-  window.addEventListener('load', () => {
-    amount(circles.length - 3);
-  })
-}
+export { followClickProgress, followInput };
