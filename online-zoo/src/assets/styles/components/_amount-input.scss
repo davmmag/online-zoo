@@ -1,0 +1,47 @@
+.amount-input {
+  width: 180px;
+  height: 42px;
+  background-color: #fde3d6;
+  padding: 11px 6px;
+  color: #929699;
+  font-size: 1.6rem;
+  border: 1px solid #929699;
+  border-radius: 2px;
+  outline: none;
+  background-image: url(../svg/dollar.svg);
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+  transition: all .3 ease-in-out;
+
+  &::placeholder {
+    color: #929699;
+    font-size: 1.6rem;
+  }
+
+  &:focus {
+    border-color: #4B9200;
+    color: #4B9200;
+    background-image: url(../svg/dollar-active.svg);
+
+    &::placeholder {
+      color: #4B9200;
+    }
+  }
+
+  &:invalid {
+    border-color: #D31414;
+    background-image: url(../svg/dollar-error.svg);
+    color: #D31414;
+
+    &::placeholder {
+      color: #D31414;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .amount-input {
+    width: 268px;
+    height: 54px;
+  }
+}

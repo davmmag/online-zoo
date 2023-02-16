@@ -1,0 +1,35 @@
+.radio-block {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.4;
+
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
+  color: var(--clr-primary-alt);
+  cursor: pointer;
+
+  &__input {
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+    width: 16px;
+    height: 16px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    border: 1px solid #F9804B;
+    margin: 0;
+    border-radius: 50%;
+    font: inherit;
+    color: currentColor;
+    transform: translateY(12%);
+    transition: all .3s ease-in-out;
+
+    &:checked {
+      background-color: #4B9200;
+      border-color: #4B9200;
+    }
+  }
+}
